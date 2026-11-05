@@ -1,0 +1,14 @@
+.devcontainer
+.git
+.github
+.vscode
+build/container
+build/scripts
+!build/scripts/aws/lambda/extension.zip
+build/terraform
+**/examples
+.dockerignore
+.gitignore
+.golangci.yml
+CODEOWNERS
+**/*.md

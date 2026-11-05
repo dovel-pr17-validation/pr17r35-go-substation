@@ -1,0 +1,24 @@
+{
+	"name": "Go",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "root",
+	"runArgs": [
+		"--memory=2g",
+		"--cpus=2"
+	],
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
+	"postStartCommand": "sh .devcontainer/post_start.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.go",
+				"hashicorp.terraform",
+				"grafana.vscode-jsonnet"
+			]
+		}
+	}
+}
